@@ -74,6 +74,7 @@ while not is_coffee_machine_off:
        if order == "report":
           for item in resources:
               print(f"{item}: {resources[item]}")
+          print(f"money collected: {total_money}")     
        elif order == "off":
            is_coffee_machine_off = True
        else:
