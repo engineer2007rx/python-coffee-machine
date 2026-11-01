@@ -66,6 +66,7 @@ def update_resources(coffee):
 
 
 is_coffee_machine_off= False
+total_money = 0
 
 while not is_coffee_machine_off:
        order = input(f"​What would you like? (espresso/latte/cappuccino) ​") 
@@ -85,6 +86,7 @@ while not is_coffee_machine_off:
                     name = input("what is your name sir/maam ").title()
                     print(f" Enjoy your {order} {name} ")
                     update_resources(order)
+                    total_money += int(menu[order]["cost"])
                     if change>0:
                          print(f"and here is your change {change} ") 
                 else:
